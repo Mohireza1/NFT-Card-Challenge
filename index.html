@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
     <title>Frontend Mentor | NFT preview card component</title>
@@ -33,13 +33,23 @@
   </head>
   <body>
     <main>
-      <img src="images/image-equilibrium.jpg" alt="an image of Equilibrium" />
+      <div class="overlay-image">
+        <img
+          class="main-image"
+          src="images/image-equilibrium.jpg"
+          alt="an image of Equilibrium"
+        />
+        <div class="overlay"></div>
+        <div class="view">
+          <img src="images/icon-view.svg" class="overlay-pic" />
+        </div>
+      </div>
       <h1>Equilibrium #3429</h1>
       <p>Our Equilibrium collection promotes balance and calm.</p>
       <div class="pt flex">
         <div class="pt-box flex">
           <img src="images/icon-ethereum.svg" />
-          <p>0.041 ETH</p>
+          <p style="color: hsl(178, 100%, 50%); font-weight: 600">0.041 ETH</p>
         </div>
         <div class="pt-box flex">
           <img src="images/icon-clock.svg" />
@@ -53,7 +63,7 @@
           src="images/image-avatar.png"
           alt="avatar of the creator"
         />
-        <p>Creation of Jules Wyvern</p>
+        <p>Creation of <a href="#" class="avatar-link">Jules Wyvern</a></p>
       </div>
       <!-- <div class="attribution">
         Challenge by

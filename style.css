@@ -3,8 +3,7 @@
 *::before {
   box-sizing: border-box;
 }
-:root {
-}
+
 html {
   height: 100%;
   margin: 0;
@@ -12,7 +11,6 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,10 +19,13 @@ body {
 }
 /* ===start here=== */
 main {
-  width: 85%;
+  width: min(85%, 350px);
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+  font-size: 18px;
+  line-height: 1.5rem;
 }
 .flex {
   display: flex;
@@ -34,24 +35,85 @@ main {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 main h1 {
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
 }
+main h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
 main p {
   color: hsl(215, 51%, 70%);
+  font-size: 1rem;
+  font-weight: 300;
 }
 main hr {
   background-color: hsl(215, 32%, 27%);
   border: none;
   height: 1px;
 }
+.pt {
+  justify-content: space-between;
+}
+.pt-box {
+  gap: 0.3rem;
+}
 /* ===avatar=== */
 .avatar-container {
+  justify-content: flex-start;
+  gap: 1rem;
+  font-weight: 400;
 }
 .avatar-image {
   border-radius: 50%;
   border: 1px solid hsl(0, 0%, 100%);
   max-width: 10%;
+}
+
+/* ===overlay=== */
+.overlay-image {
+  position: relative;
+  cursor: pointer;
+}
+.main-image {
+  border-radius: 10px;
+}
+.overlay {
+  background-color: hsl(178, 100%, 50%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+}
+.view {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.overlay-image:hover .overlay {
+  opacity: 60%;
+  transition: all 0.1s ease-in;
+}
+.overlay-image:hover .view {
+  opacity: 100%;
+  transition: all 0.1s ease-in;
+}
+
+/* ===link=== */
+main a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: hsl(178, 100%, 50%);
 }
