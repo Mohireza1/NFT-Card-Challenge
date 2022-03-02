@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+:root {
+}
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+/* ===start here=== */
+main {
+  width: 85%;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: hsl(216, 50%, 16%);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+main h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+main p {
+  color: hsl(215, 51%, 70%);
+}
+main hr {
+  background-color: hsl(215, 32%, 27%);
+  border: none;
+  height: 1px;
+}
+/* ===avatar=== */
+.avatar-container {
+}
+.avatar-image {
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  max-width: 10%;
+}
